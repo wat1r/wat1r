@@ -1,0 +1,26 @@
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 现有字符串"good good study, day day up."，统计其中各个字符出现的次数。
+ * 例如：上述字符串中各个字符的出现的次数为：
+ * {g=2, u=2, d=5, t=1, s=1, p=1, a=2, o=4, y=3}。
+ */
+public class Task1 {
+
+	public static void main(String[] aergs) {
+		String str = "good good study, day day up.";
+		String strNew = str.replaceAll("[^a-zA-Z]+", "");
+		System.out.println(strNew);
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		for(int i = 0;i<strNew.length();i++){
+			char c = strNew.charAt(i);
+			if(map.containsKey(c)){
+				map.put(c, map.get(c)+1);
+			}else{
+				map.put(c, 1);
+			}
+		}
+        System.out.println(map);
+	}
+}
