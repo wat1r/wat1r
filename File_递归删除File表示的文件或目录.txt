@@ -1,0 +1,26 @@
+import java.io.File;
+
+/**
+ * 删除File表示的文件或目录
+ * @author adminitartor
+ */
+public class FileDemo8 {
+	public static void main(String[] args) {
+		File f = new File("a");
+		delete(f);
+	}
+	/**
+	 * 删除给定File表示的文件或目录
+	 * @param file
+	 */
+	public static void delete(File file){
+		if(file.isDirectory()){
+			//将其所有子项删除
+			File[] subs = file.listFiles();
+			for(File sub : subs){
+				delete(sub);
+			}
+		}
+		file.delete();
+	}
+}
