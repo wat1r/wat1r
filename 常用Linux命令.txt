@@ -16,3 +16,6 @@ tcpdump tcp -i eth11 -t -s 0 -c 100 and dst port ! 22 and src net 172.16.9.0/24 
 
 
 http://blog.csdn.net/lufy_legend/article/details/25191765
+
+
+http://blog.sina.com.cn/s/blog_e370ed2f0102xxoa.html
